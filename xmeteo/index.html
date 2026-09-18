@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy — Don't Call!</title>
+<title>Privacy Policy — xMeteo</title>
 <style>
   :root { color-scheme: light dark; }
   body {
@@ -35,39 +35,53 @@
 
 <p class="lang-switch"><a href="en/">English version</a></p>
 
-<h1>Informativa sulla privacy — Don't Call!</h1>
-<p class="updated">Ultimo aggiornamento: 17 settembre 2026</p>
+<h1>Informativa sulla privacy — xMeteo</h1>
+<p class="updated">Ultimo aggiornamento: 18 settembre 2026</p>
 
-<p>Questa informativa descrive come l'app <strong>Don't Call!</strong>
-(<code>net.iappscl.dontcall</code>), sviluppata da Luigi Casella / IAppsCL ("noi"), tratta i
+<p>Questa informativa descrive come l'app <strong>xMeteo</strong>
+(<code>net.iappscl.xmeteo</code>), sviluppata da Luigi Casella / IAppsCL ("noi"), tratta i
 dati quando la utilizzi.</p>
 
 <h2>Cosa fa l'app</h2>
-<p>Don't Call! blocca in automatico le chiamate in arrivo da numeri esteri non presenti in
-rubrica, secondo le regole che imposti tu (per nazione e tipo di linea).</p>
+<p>xMeteo mostra le previsioni meteo attuali, orarie e giornaliere per la posizione che
+scegli (GPS o ricerca manuale di una località), con widget opzionali per la schermata
+home.</p>
 
 <h2>Dati trattati e dove restano</h2>
-<p>Tutta l'elaborazione delle chiamate avviene <strong>esclusivamente sul tuo
-dispositivo</strong>. Non gestiamo un server e non riceviamo né conserviamo i tuoi dati.</p>
 <ul>
-  <li><strong>Rubrica (contatti)</strong> — l'app legge i numeri di telefono salvati in
-    rubrica al solo scopo di verificare se un numero in arrivo è già tra i tuoi contatti (in
-    tal caso la chiamata passa sempre). I contatti non vengono copiati, trasmessi altrove o
-    conservati fuori dal dispositivo.</li>
-  <li><strong>Numero delle chiamate in arrivo</strong> — usato dal servizio di screening per
-    applicare le regole di blocco (prefisso nazionale, presenza in rubrica). Le chiamate
-    bloccate restano in una cronologia locale, visibile solo a te nell'app, finché non la
-    cancelli o disinstalli l'app.</li>
-  <li><strong>Numeri bloccati manualmente</strong> — salvati solo sul dispositivo, nella
-    lista che gestisci dalle impostazioni dell'app.</li>
-  <li><strong>Notifiche</strong> — l'app può mostrarti notifiche locali (es. chiamata
-    bloccata); non è richiesto alcun servizio esterno di messaggistica.</li>
+  <li><strong>Posizione (GPS o ricerca manuale)</strong> — le coordinate della località
+    selezionata vengono inviate ai servizi meteorologici di terze parti elencati sotto, al
+    solo scopo di ottenere le previsioni per quel punto. Non conserviamo noi queste
+    coordinate su alcun server: restano sul dispositivo, salvate localmente tra le tue
+    località preferite se le salvi.</li>
+  <li><strong>Località salvate e preferenze</strong> — memorizzate solo sul dispositivo
+    (nomi delle località, unità di misura, tema, ecc.).</li>
+  <li><strong>Widget</strong> — aggiornano le previsioni in background per la località
+    scelta, con le stesse chiamate ai servizi meteo elencati sotto; nessun dato aggiuntivo
+    viene raccolto.</li>
 </ul>
-<p>Non vendiamo, non condividiamo e non trasmettiamo a terzi i dati elencati sopra.</p>
+<p>Non vendiamo, non condividiamo e non trasmettiamo a terzi i dati elencati sopra, al di
+fuori dell'invio delle coordinate ai servizi meteo necessari per mostrarti le previsioni.</p>
 
-<h2>Servizi di terze parti</h2>
-<p>L'app integra due servizi di Google, che operano secondo le rispettive informative sulla
-privacy:</p>
+<h2>Servizi meteorologici di terze parti</h2>
+<p>Per ottenere le previsioni, l'app invia la posizione selezionata (latitudine/longitudine)
+a uno o più dei seguenti servizi pubblici, secondo la copertura geografica migliore per quel
+punto:</p>
+<ul>
+  <li>Open-Meteo (incluso Open-Meteo Marine)</li>
+  <li>MET Norway</li>
+  <li>NOAA (Stati Uniti)</li>
+  <li>BOM — Bureau of Meteorology (Australia)</li>
+  <li>JMA — Japan Meteorological Agency (Giappone)</li>
+  <li>Environment Canada</li>
+  <li>Bright Sky / DWD (Germania)</li>
+  <li>RainViewer (mappa radar delle precipitazioni)</li>
+</ul>
+<p>Ognuno di questi servizi opera secondo le proprie condizioni e informative sulla
+privacy, non gestite da noi. Solo le coordinate della posizione richiesta vengono inviate;
+non inviamo identificativi personali o pubblicitari a questi servizi.</p>
+
+<h2>Altri servizi di terze parti</h2>
 <ul>
   <li><strong>Google AdMob</strong> — mostra annunci pubblicitari (incluso un annuncio
     "rewarded" opzionale per sbloccare funzionalità). AdMob può raccogliere identificativi
@@ -85,9 +99,8 @@ privacy:</p>
 <h2>Permessi richiesti dall'app e perché</h2>
 <table>
   <tr><th>Permesso</th><th>Motivo</th></tr>
-  <tr><td>Lettura rubrica (READ_CONTACTS)</td><td>Verificare se un numero in arrivo è già un tuo contatto</td></tr>
-  <tr><td>Notifiche (POST_NOTIFICATIONS)</td><td>Avvisarti quando una chiamata viene bloccata</td></tr>
-  <tr><td>Servizio di screening chiamate (CallScreeningService)</td><td>Permettere all'app di valutare e bloccare le chiamate in arrivo, come app di screening di sistema che scegli tu dalle impostazioni Android</td></tr>
+  <tr><td>Posizione precisa/approssimativa (ACCESS_FINE_LOCATION / ACCESS_COARSE_LOCATION)</td><td>Mostrare le previsioni per la tua posizione attuale, se scegli di usarla al posto della ricerca manuale</td></tr>
+  <tr><td>Accesso a Internet e stato rete (INTERNET / ACCESS_NETWORK_STATE)</td><td>Contattare i servizi meteo di terze parti per scaricare le previsioni</td></tr>
 </table>
 
 <h2>Minori</h2>
@@ -95,8 +108,8 @@ privacy:</p>
 anni.</p>
 
 <h2>I tuoi diritti</h2>
-<p>Poiché i dati di funzionamento restano sul tuo dispositivo, puoi cancellarli in ogni
-momento svuotando la cronologia dall'app o disinstallandola. Per gli identificativi
+<p>Le località salvate e le preferenze restano sul tuo dispositivo: puoi cancellarle in
+ogni momento dalle impostazioni dell'app o disinstallandola. Per gli identificativi
 pubblicitari gestiti da Google, puoi gestire le preferenze pubblicitarie dalle impostazioni
 del tuo dispositivo Android o da <a href="https://adssettings.google.com">adssettings.google.com</a>.</p>
 
