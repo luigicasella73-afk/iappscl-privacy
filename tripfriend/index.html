@@ -41,6 +41,7 @@
 
 <h2>Cosa fa l'app</h2>
 <p>Trip Friend confronta i percorsi possibili con il meteo previsto lungo il tragitto, mostra le previsioni del tempo, ricorda dove hai parcheggiato e ti avvisa delle scadenze dei tuoi mezzi (bollo, assicurazione, revisione, tagliando) e dei tuoi documenti (carta d'identità, passaporto, patente e altri). Propone anche viaggi ad anello con tappe e luoghi da vedere, e offre widget per la schermata Home con il meteo e con il Sole e la Luna.</p>
+<p>Tiene inoltre il registro dei rifornimenti di ogni mezzo e un diario di viaggio con foto, mostra gli avvisi meteo ufficiali, può registrare i percorsi con il GPS ed esportarli in GPX, esportare il diario in PDF e salvare una copia dei dati in un file scelto da te.</p>
 
 <h2>Dati trattati e dove restano</h2>
 <p>Non richiede un account, non gestiamo un server e <strong>non riceviamo né conserviamo i tuoi dati</strong>. Tutto ciò che inserisci resta nella memoria privata dell'app sul tuo dispositivo:</p>
@@ -49,7 +50,13 @@
   <li><strong>Documenti</strong> — tipo, intestatario, numero, ente e date di rilascio e di scadenza, note.</li>
   <li><strong>Parcheggi</strong> — posizione e indirizzo del mezzo parcheggiato, nota, foto, durata della sosta, cronologia dei parcheggi. Le foto sono salvate nella cartella privata dell'app.</li>
   <li><strong>Percorsi</strong> — tappe e cronologia dei percorsi calcolati, luoghi recenti e salvati.</li>
-  <li><strong>Bluetooth</strong> — i nomi e gli indirizzi dei dispositivi Bluetooth che scegli di associare a un mezzo, per salvare il parcheggio quando si scollegano.</li>
+  <li><strong>Rifornimenti</strong> — data, chilometri, quantità e importo dei rifornimenti di ogni mezzo.</li>
+  <li><strong>Diario di viaggio</strong> — titolo, testi, luoghi, ora, temperatura e foto dei momenti che aggiungi. Le foto, scattate o scelte dalla galleria, sono copiate nella cartella privata dell'app.</li>
+  <li><strong>Copia dei dati</strong> — solo se la chiedi tu: un file con mezzi, documenti, scadenze, rifornimenti, parcheggi, diari e impostazioni (senza foto e senza chiave Open-Meteo), salvato dove scegli tu. Da quel momento il file è sotto il tuo controllo.</li>
+  <li><strong>Condivisione</strong> — solo se tocchi «Condividi»: il parcheggio, un percorso salvato o un diario con le sue foto passano all'app che scegli tu. Allo stesso modo il diario in PDF e i percorsi in GPX vengono salvati dove scegli tu. Non li inviamo a nessun server.</li>
+  <li><strong>Percorsi registrati</strong> — solo se avvii tu la registrazione: posizione e ora dei punti GPS rilevati fino a quando la fermi, salvati nella memoria privata dell'app.</li>
+  <li><strong>Foto dei mezzi</strong> — la foto che scegli per ogni mezzo, copiata nella cartella privata dell'app.</li>
+  <li><strong>Bluetooth</strong> — i nomi e gli indirizzi dei dispositivi Bluetooth che scegli di associare a un mezzo, per salvare il parcheggio quando si scollegano; il nome del dispositivo collegato in quel momento, per proporti di associarlo a un mezzo; l'ora dell'ultimo collegamento di ogni mezzo.</li>
   <li><strong>Proposte di viaggio</strong> — impostazioni della proposta e, in cache, le città e le quote già cercate, per non ripetere le stesse richieste.</li>
   <li><strong>Widget</strong> — il luogo mostrato nei widget (coordinate e nome, gli stessi della scheda Meteo), il suo fuso orario e l'ultimo meteo scaricato.</li>
   <li><strong>Impostazioni</strong> — lingua, tema, icone, fonti e sezioni del meteo, unità, eventuale chiave Open-Meteo che inserisci tu.</li>
@@ -58,20 +65,22 @@
 
 <h2>Posizione</h2>
 <p>L'app usa la posizione del dispositivo per: partire dal punto in cui sei, mostrare il meteo del luogo, salvare il parcheggio, cercare distributori e servizi vicini e proporre la regione del mezzo. Se attivi il salvataggio automatico con il Bluetooth, l'app può rilevare la posizione <strong>anche quando è chiusa</strong>, solo nel momento in cui si scollega il Bluetooth del mezzo, per salvare il parcheggio; serve il permesso "Consenti sempre", che puoi revocare in ogni momento.</p>
+<p>Se avvii la registrazione di un percorso, l'app rileva la posizione ogni pochi secondi, anche a schermo spento, finché non la fermi; una notifica fissa ti ricorda che la registrazione è attiva.</p>
 <p>Per ottenere previsioni, percorsi, mappe e prezzi, l'app invia le <strong>coordinate dei luoghi interessati</strong> (non il tuo nome né altri dati personali) direttamente ai servizi pubblici elencati qui sotto, senza passare da nostri server.</p>
 
 <h2>Servizi di terze parti</h2>
 <p>Ciascuno opera secondo la propria informativa sulla privacy:</p>
 <ul>
-  <li><strong>MeteoAlarm / EUMETNET</strong> (feeds.meteoalarm.org) — allerte meteo ufficiali in Europa.</li>
-  <li><strong>MET Norway</strong> (api.met.no), <strong>NOAA / National Weather Service</strong> (api.weather.gov), <strong>Environment and Climate Change Canada</strong> (api.weather.gc.ca), <strong>Bright Sky / DWD</strong> (api.brightsky.dev) — previsioni meteo.</li>
-  <li><strong>Open-Meteo</strong> (customer-api.open-meteo.com e servizi collegati) — solo se inserisci una tua chiave di un piano commerciale Open-Meteo nelle impostazioni: previsioni meteo, del mare e della qualità dell'aria e altitudine dei luoghi.</li>
+  <li><strong>MET Norway</strong> (api.met.no), <strong>NOAA / National Weather Service</strong> (api.weather.gov), <strong>Environment and Climate Change Canada</strong> (api.weather.gc.ca), <strong>Bright Sky / DWD</strong> (api.brightsky.dev) — previsioni meteo, anche lungo i percorsi e nei widget.</li>
+  <li><strong>Open-Meteo</strong> (customer-api.open-meteo.com e servizi collegati) — solo se inserisci nelle impostazioni una tua chiave di un piano commerciale Open-Meteo: previsioni meteo, del mare, della qualità dell'aria e dei pollini (dati Copernicus CAMS) e altitudine dei luoghi.</li>
   <li><strong>OpenStreetMap</strong> (tile.openstreetmap.org) — riquadri della mappa; <strong>Photon / Komoot</strong> (photon.komoot.io) — ricerca dei luoghi e degli indirizzi; <strong>FOSSGIS / OSRM</strong> (routing.openstreetmap.de) — calcolo dei percorsi; <strong>FOSSGIS / Valhalla</strong> (valhalla1.openstreetmap.de) — percorsi in moto senza autostrade.</li>
   <li><strong>Overpass API</strong> (overpass-api.de, maps.mail.ru) — città e paesi attorno alla partenza, per proporre un viaggio.</li>
   <li><strong>Wikipedia / Wikidata / Wikimedia</strong> (wikipedia.org, wikidata.org, upload.wikimedia.org) — descrizioni e foto dei luoghi da vedere nelle proposte di viaggio.</li>
   <li><strong>Google Maps</strong> — solo quando scegli di aprire un luogo o un percorso nell'app Google Maps.</li>
   <li><strong>Ministero delle Imprese e del Made in Italy</strong> (carburanti.mise.gov.it) — prezzi dei carburanti dei distributori vicini (Italia).</li>
   <li><strong>DuckDuckGo</strong> — solo se tocchi "Webcam", la ricerca si apre nel browser.</li>
+  <li><strong>MeteoAlarm / EUMETNET</strong> (feeds.meteoalarm.org) — avvisi meteo ufficiali in Europa: l'app scarica l'elenco del paese, senza inviare coordinate. Negli Stati Uniti e in Germania gli avvisi arrivano da NOAA e da Bright Sky, con le coordinate del punto.</li>
+  <li><strong>Geocodifica del dispositivo (Google)</strong> — per ricavare da una posizione il paese, la regione e il comune: regione del mezzo, zona degli avvisi meteo, luogo dei momenti del diario.</li>
   <li><strong>Google AdMob</strong> — mostra un annuncio video "rewarded" opzionale per sbloccare Premium per la sessione. AdMob può raccogliere l'identificativo pubblicitario e dati tecnici del dispositivo per la selezione e misurazione degli annunci. Nei paesi dell'Unione Europea, SEE, UK e Svizzera, prima di mostrare annunci ti viene richiesto il consenso tramite il modulo standard Google (User Messaging Platform). Informativa Google: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
 </ul>
 <p>L'app non offre acquisti in-app e non tratta dati di pagamento.</p>
@@ -83,7 +92,8 @@
 <tr><td>Posizione (ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION)</td><td>Partenza dal punto in cui sei, meteo locale, parcheggio, servizi vicini</td></tr>
 <tr><td>Posizione in background (ACCESS_BACKGROUND_LOCATION)</td><td>Solo se attivi il salvataggio automatico: salvare il parcheggio quando si scollega il Bluetooth del mezzo</td></tr>
 <tr><td>Bluetooth (BLUETOOTH_CONNECT)</td><td>Elencare i dispositivi associati e riconoscere quando quello del mezzo si collega o si scollega</td></tr>
-<tr><td>Fotocamera (CAMERA)</td><td>Scattare la foto del parcheggio</td></tr>
+<tr><td>Fotocamera (CAMERA)</td><td>Scattare la foto del parcheggio, dei mezzi e dei momenti del diario di viaggio</td></tr>
+<tr><td>Servizio in primo piano per la posizione (FOREGROUND_SERVICE, FOREGROUND_SERVICE_LOCATION)</td><td>Solo quando avvii tu la registrazione di un percorso: continuare a rilevare la posizione a schermo spento, con una notifica fissa</td></tr>
 <tr><td>Notifiche (POST_NOTIFICATIONS)</td><td>Parcheggio salvato, fine della sosta, scadenze di mezzi e documenti</td></tr>
 <tr><td>Avvio del dispositivo (RECEIVE_BOOT_COMPLETED)</td><td>Riprogrammare gli avvisi delle scadenze dopo il riavvio del telefono</td></tr>
 <tr><td>ID pubblicità (AD_ID e permessi ADSERVICES)</td><td>Solo per gli annunci AdMob</td></tr>
