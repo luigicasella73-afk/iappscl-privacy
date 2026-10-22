@@ -53,3 +53,8 @@ hr { border: 0; border-top: 1px solid var(--d-stroke); margin: 2rem 0; }
   padding: .35rem .9rem; border: 1px solid var(--d-stroke); border-radius: 999px; background: var(--d-surface2); color: var(--d-text);
 }
 .lang-switch a:hover { border-color: var(--d-accent); color: var(--d-accent); }
+
+/* niente scorrimento orizzontale sul telefono: tabelle e nomi lunghi vanno a capo */
+html, body { overflow-x: clip; }
+table { table-layout: fixed; }
+td, th, code { overflow-wrap: anywhere; word-break: break-word; }
