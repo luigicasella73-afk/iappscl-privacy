@@ -45,11 +45,11 @@ data when you use it.</p>
 
 <h2>What the app does</h2>
 <p>x̄Meteo shows current, hourly and daily weather forecasts for the location you choose
-(GPS or manual search), with optional home-screen widgets.</p>
+(approximate location or manual search), with optional home-screen widgets.</p>
 
 <h2>Data we process, and where it stays</h2>
 <ul>
-  <li><strong>Location (GPS or manual search)</strong> — the coordinates of the selected
+  <li><strong>Location (approximate or manual search)</strong> — the coordinates of the selected
     location are sent to the third-party weather services listed below, solely to fetch the
     forecast for that point. We do not store these coordinates on any server ourselves:
     they stay on your device, saved locally among your favourite locations if you choose to
@@ -95,7 +95,7 @@ or advertising identifiers to these services.</p>
 <h2>App permissions and why we need them</h2>
 <table>
   <tr><th>Permission</th><th>Reason</th></tr>
-  <tr><td>Precise/approximate location (ACCESS_FINE_LOCATION / ACCESS_COARSE_LOCATION)</td><td>Show the forecast for your current location, if you choose it instead of manual search</td></tr>
+  <tr><td>Approximate location (ACCESS_COARSE_LOCATION)</td><td>Show the forecast for your current location, if you choose it instead of manual search</td></tr>
   <tr><td>Internet access and network state (INTERNET / ACCESS_NETWORK_STATE)</td><td>Contact third-party weather services to download forecasts</td></tr>
 </table>
 
